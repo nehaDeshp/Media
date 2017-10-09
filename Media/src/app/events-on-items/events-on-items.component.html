@@ -1,0 +1,9 @@
+<form>
+<div class = "form-group"> 
+  <button class = "form-control like">Liked</button>
+  <button class = "form-control remove" (click) = "remove()">remove</button>
+  <div *ngIf="vis == -1">
+    <button (click)= "onWatched()" class = "form-control watch">watch</button>
+  </div>
+</div>
+</form>

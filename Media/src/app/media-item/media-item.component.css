@@ -1,0 +1,16 @@
+.m_item{
+
+    width:fit-content;
+    margin:20px;
+    display: inline-block;
+
+}
+
+.movieprops{
+   font-size: 8px; 
+}
+
+.watch{
+    background-color: #3EDF3E;
+
+}
