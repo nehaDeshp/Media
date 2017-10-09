@@ -1,10 +1,12 @@
 <form>
 <div class = "form-group"> 
   <div *ngIf="like==1">
-    <label> Watched </label>
+    <label> You liked it! </label>
   </div>
   <div *ngIf="like==-1">
-    <button class = "form-control like" (click)="liked()">Liked</button>  
+    <a href="#" class="btn btn-info btn-lg form-control like" (click)="liked()">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+    </a>
   </div>
   <button class = "form-control remove" (click) = "remove()">remove</button>
   <div *ngIf="vis == -1">
@@ -12,3 +14,4 @@
   </div>
 </div>
 </form>
+
