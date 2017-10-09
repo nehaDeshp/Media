@@ -1,0 +1,43 @@
+<div class = "row styl">
+  <div class = "col-md-6 col-sm-12 col-xs-12 " >
+    <h1> Media Watch Tracker </h1>
+    <h6> <i> Keeping track of media I want to watch </i></h6>
+  </div>
+  <div class = "col-md-6 col-sm-12 col-xs-12" (click)="addMovie()" >
+    <div *ngIf="btnClick==false">
+      <button class = "form-control addNew"> Add A New Movie to Watch </button>
+    </div>
+  </div>
+</div>
+<div *ngIf="btnClick==true">
+  <form (submit)="onSubmit(myForm)" #myForm="ngForm">
+    <div class = "form-group formstyl">
+      <div class="row">
+        <div class="col-md-2 col-sm-2 col-xs-2">
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8" style="margin:5px"> 
+          <input type = "text" placeholder="MovieName" class = "form-control comp" 
+                 name="m_name" [(ngModel)]="int" #name="ngModel" required>
+          <div *ngIf="name.invalid">
+            <label> Provide Movie Name </label>
+          </div>
+          <select class = "form-control" name="genre">
+            <option>Action</option>
+            <option> Drama </option>
+            <option>Romance</option>
+            <option> Classics</option>
+            <option> Comedies</option>
+            <option>Thriller</option>
+            <option>Suspense </option> 
+          </select>
+          <button class = "form-control btn-style" type = "submit"> Add to Wishlist </button>
+          <button class = "form-control btn-style" (click) = "cancelMovieAdd()"> Cancel </button>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="row styl">
+<app-media-item></app-media-item>

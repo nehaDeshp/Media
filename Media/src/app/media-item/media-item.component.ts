@@ -7,6 +7,7 @@ import { FetchMovieDataService} from '../fetch-movie-data.service';
 })
 export class MediaItemComponent implements OnInit {
 
+  interest;
   movies = [];
   constructor(public data : FetchMovieDataService) { 
   }

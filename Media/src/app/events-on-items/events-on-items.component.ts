@@ -8,6 +8,7 @@ import {FetchMovieDataService} from '../fetch-movie-data.service';
 export class EventsOnItemsComponent implements OnInit {
   @Input() index;
   vis = -1;
+  like=-1;
   constructor(public data: FetchMovieDataService) {
     console.log(this.index);
    }
@@ -20,5 +21,8 @@ export class EventsOnItemsComponent implements OnInit {
   }
   remove(){
     this.data.removeMediaItem();
+  }
+  liked(){
+    this.like = 1;
   }
 }

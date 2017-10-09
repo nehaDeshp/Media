@@ -1,13 +1,10 @@
-
 <div *ngFor = "let movie of movies;let i = index" class ="m_item">
-    
-    <h2> {{movie.name}} </h2>
-    <div class = "movieprops">
-      <h4> Watched On : {{movie.watchedon}}</h4>
-      <h4> {{movie.type}} </h4>
-      <h4> Release : {{movie.release}} </h4>
-    </div>
-    <app-events-on-items [index] = i>
-
-    </app-events-on-items>
+  <h2> {{movie.name}} </h2>
+  <div class = "movieprops">
+    <h4> Watched On : {{movie.watchedon}}</h4>
+    <h4> {{movie.type}} </h4>
+    <h4> Release : {{movie.release}} </h4>
+  </div>
+  <app-events-on-items [index] = i>
+  </app-events-on-items>
 </div>

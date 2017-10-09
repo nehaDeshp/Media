@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {Observable} from 'rxjs/Rx';
 
 @Injectable()
 export class FetchMovieDataService {
@@ -23,5 +24,4 @@ export class FetchMovieDataService {
     console.log("In service"+this.removeMedia);
     
   }
-
 }

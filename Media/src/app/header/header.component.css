@@ -1,0 +1,21 @@
+.styl{  
+    background-color: rgba(0, 6, 32, 0.86);
+    color: blanchedalmond;
+    margin:10px;
+    padding: 10px;
+}
+.addNew{
+    font-size:13px;
+    float:right;
+    width: 100px;
+    height: 80px;
+}
+.formstyl{
+    background-color: rgba(0, 6, 32, 0.86);
+    color: blanchedalmond;
+    margin:10px;
+}
+.btn-style{
+    width:50%;
+    float: right;
+}

@@ -1,0 +1,14 @@
+[
+    {"type" : "Action"},
+    {"type" : "Drama"},
+    {"type" : "Comedy"},
+    {"type" : "Romance"}
+    {"type" : "Thriller"},
+    {"type" : "Suspense"},
+    {"type" : "Animated"},
+    {"type" : "Kids"},
+    {"type" : "Crime"},
+    {"type" : "Reality"},
+    {"type" : "Science Fiction"},
+    {"type" : "Documentary"}
+]
