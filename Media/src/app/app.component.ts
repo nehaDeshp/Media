@@ -6,7 +6,7 @@ import {FetchMovieDataService} from './fetch-movie-data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  interest;
+ 
   constructor(public data : FetchMovieDataService){
   }
 

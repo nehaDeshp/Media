@@ -17,11 +17,11 @@
         </div>
         <div class="col-md-8 col-sm-8 col-xs-8" style="margin:5px"> 
           <input type = "text" placeholder="MovieName" class = "form-control comp" 
-                 name="m_name" [(ngModel)]="int" #name="ngModel" required>
-          <div *ngIf="name.invalid">
-            <label> Provide Movie Name </label>
+                 name="m_name" [(ngModel)]="int" #movie ="ngModel" required>
+          <div *ngIf="movie.invalid && (movie.dirty || movie.touched)">
+            <label class = "errorStyle"> Please Provide Movie Name </label>
           </div>
-          <select class = "form-control" name="genre">
+          <select class = "form-control" name="genre" #select="ngModel" [(ngModel)]="selected" required>
             <option>Action</option>
             <option> Drama </option>
             <option>Romance</option>
@@ -30,7 +30,15 @@
             <option>Thriller</option>
             <option>Suspense </option> 
           </select>
-          <button class = "form-control btn-style" type = "submit"> Add to Wishlist </button>
+          <div *ngIf="select.invalid&&select.touched ">
+            <label class = "errorStyle"> Please Provide Movie Genre </label>
+          </div>
+          <input type = "text" placeholder="Release Year" class = "form-control comp" 
+                 name="m_rel" [(ngModel)]="relYr" #yr ="ngModel" required>
+          <div *ngIf="yr.invalid && (yr.dirty || yr.touched)">
+            <label class = "errorStyle"> Please Provide Released Year </label>
+          </div>
+          <button class = "form-control btn-style" type = "submit" (click) = "addToWishList()"> Add to Wishlist </button>
           <button class = "form-control btn-style" (click) = "cancelMovieAdd()"> Cancel </button>
         </div>
         <div class="col-md-2 col-sm-2 col-xs-2">

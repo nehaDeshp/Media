@@ -6,6 +6,7 @@ export class FetchMovieDataService {
 
   movieData = [];
   removeMedia = false;
+  currentTime;
   constructor() { 
     
     this.movieData = [
@@ -20,8 +21,22 @@ export class FetchMovieDataService {
 
   }
   removeMediaItem(){
-    this.removeMedia = true;
-    console.log("In service"+this.removeMedia);
+    this.removeMedia = true;  
+  }
+  getCurrentDate(index){
+    console.log("In service", index);
+    this.currentTime = new Date();
+    console.log(this.currentTime);
     
+    this.movieData[index].watchedon = this.currentTime;
+    console.log("Watched : "+this.movieData[index]);
+  }
+  add(name:String,genre:String,release:String){
+    this.movieData.push({
+      "name":name,
+      "type":genre,
+      "release":release
+    });
+    return this.movieData;
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input , Output , EventEmitter} from '@angular/core';
-import {FetchMovieDataService} from '../fetch-movie-data.service';
+import {FetchMovieDataService} from '../fetch-movie-data.service';  
+import {Observable} from 'rxjs/Observable';
 @Component({
   selector: 'app-events-on-items',
   templateUrl: './events-on-items.component.html',
@@ -18,6 +19,9 @@ export class EventsOnItemsComponent implements OnInit {
   }
   onWatched(){
     this.vis=1;
+    console.log("in evens",this.index);
+    
+    this.data.getCurrentDate(this.index);
   }
   remove(){
     this.data.removeMediaItem();

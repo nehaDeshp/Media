@@ -9,7 +9,8 @@ export class MediaItemComponent implements OnInit {
 
   interest;
   movies = [];
-  constructor(public data : FetchMovieDataService) { 
+  watchedOn;
+  constructor(public data : FetchMovieDataService) {
   }
 
   ngOnInit() {

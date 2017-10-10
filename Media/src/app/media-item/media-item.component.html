@@ -1,7 +1,9 @@
 <div *ngFor = "let movie of movies;let i = index" class ="m_item">
   <h4> {{movie.name}} </h4>
   <div class = "movieprops">
-    <h6> Watched On : {{movie.watchedon}}</h6>
+    <div *ngIf="!movie.watchedOn">
+      <h6> Watched On : {{movie.watchedon | date }}</h6>
+    </div>
     <h6> {{movie.type}} </h6>
     <h6> Release : {{movie.release}} </h6>
   </div>

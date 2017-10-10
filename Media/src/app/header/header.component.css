@@ -19,3 +19,8 @@
     width:50%;
     float: right;
 }
+.errorStyle{
+    color:red;
+    font-size:10px;
+
+}

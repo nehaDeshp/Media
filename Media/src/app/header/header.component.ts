@@ -1,3 +1,4 @@
+import {FetchMovieDataService} from '../fetch-movie-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-int;
-  
-  constructor() { }
+  int:String;
+  selected:String;
+  relYr:String;
+  constructor(public data:FetchMovieDataService) { }
   ngOnInit() {
   }
 
@@ -23,6 +25,10 @@ int;
   }
   onSubmit(myForm){
     console.log(myForm, "Data = ", this.int);
-    
+    console.log(this.selected);
+  }
+  addToWishList(){
+    this.data.add(this.int,this.selected,this.relYr);
+    this.cancelMovieAdd();
   }
 }
